@@ -82,7 +82,48 @@
 // }
 
 //---------------------------
-//列表组件
+// //列表组件
+// import 'package:flutter/material.dart';
+
+// void main () => runApp(MyApp());
+
+// class MyApp extends StatelessWidget{
+//   @override
+//   Widget build(BuildContext context){
+//     return MaterialApp(
+//       title:'bohong app',
+//       home:Scaffold(
+//         appBar: AppBar(
+//           title:Text('这里有一个列表'),
+//         ),
+//         body:ListView( //列表
+//           children:<Widget>[
+//             //图片列表
+//             new Image.network('https://i0.hdslb.com/bfs/space/cb1c3ef50e22b6096fde67febe863494caefebad.png'),
+//             new Image.network('https://i0.hdslb.com/bfs/space/cb1c3ef50e22b6096fde67febe863494caefebad.png'),
+//             new Image.network('https://i0.hdslb.com/bfs/space/cb1c3ef50e22b6096fde67febe863494caefebad.png')
+
+//             //图片文字列表
+//             // new ListTile(
+//             //   leading:Icon(Icons.access_time),//图标
+//             //   title:Text('access_time')//文字
+//             // ),new ListTile(
+//             //   leading:Icon(Icons.add_photo_alternate),
+//             //   title:Text('add_photo_alternate')
+//             // ),
+//             // new ListTile(
+//             //   leading:Icon(Icons.feedback),
+//             //   title:Text('feedback')
+//             // )
+//           ]
+//         )
+//       )
+//     );
+//   }
+// }
+
+//----------------------
+//横向滚动
 import 'package:flutter/material.dart';
 
 void main () => runApp(MyApp());
@@ -91,31 +132,30 @@ class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      title:'bohong app',
+      title:'text flutter',
       home:Scaffold(
-        appBar: AppBar(
-          title:Text('这里有一个列表'),
-        ),
-        body:ListView( //列表
-          children:<Widget>[
-            //图片列表
-            new Image.network('https://i0.hdslb.com/bfs/space/cb1c3ef50e22b6096fde67febe863494caefebad.png'),
-            new Image.network('https://i0.hdslb.com/bfs/space/cb1c3ef50e22b6096fde67febe863494caefebad.png'),
-            new Image.network('https://i0.hdslb.com/bfs/space/cb1c3ef50e22b6096fde67febe863494caefebad.png')
-
-            //图片文字列表
-            // new ListTile(
-            //   leading:Icon(Icons.access_time),//图标
-            //   title:Text('access_time')//文字
-            // ),new ListTile(
-            //   leading:Icon(Icons.add_photo_alternate),
-            //   title:Text('add_photo_alternate')
-            // ),
-            // new ListTile(
-            //   leading:Icon(Icons.feedback),
-            //   title:Text('feedback')
-            // )
-          ]
+        body:Center( //结构 body居中
+          child:Container(//盒子容器
+            height:200.0,//容器高度
+            child:ListView(//列表组件
+              scrollDirection:Axis.horizontal,//列表组件横向
+              children: <Widget>[//组件中的单个元素
+                  //图片列表
+                  Container(//容器 宽180的色块
+                    width:180.0,
+                    color:Colors.lightBlue
+                  ),
+                  Container(
+                    width:180.0,
+                    color:Colors.orange
+                  ),
+                  Container(
+                    width:180.0,
+                    color:Colors.redAccent
+                  )
+              ],
+            )
+          )
         )
       )
     );
