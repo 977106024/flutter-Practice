@@ -97,18 +97,24 @@ class MyApp extends StatelessWidget{
           title:Text('这里有一个列表'),
         ),
         body:ListView( //列表
-          children:<Widget>[ //图片文字列表
-            new ListTile(
-              leading:Icon(Icons.access_time),//图标
-              title:Text('access_time')//文字
-            ),new ListTile(
-              leading:Icon(Icons.add_photo_alternate),
-              title:Text('add_photo_alternate')
-            ),
-            new ListTile(
-              leading:Icon(Icons.feedback),
-              title:Text('feedback')
-            )
+          children:<Widget>[
+            //图片列表
+            new Image.network('https://i0.hdslb.com/bfs/space/cb1c3ef50e22b6096fde67febe863494caefebad.png'),
+            new Image.network('https://i0.hdslb.com/bfs/space/cb1c3ef50e22b6096fde67febe863494caefebad.png'),
+            new Image.network('https://i0.hdslb.com/bfs/space/cb1c3ef50e22b6096fde67febe863494caefebad.png')
+
+            //图片文字列表
+            // new ListTile(
+            //   leading:Icon(Icons.access_time),//图标
+            //   title:Text('access_time')//文字
+            // ),new ListTile(
+            //   leading:Icon(Icons.add_photo_alternate),
+            //   title:Text('add_photo_alternate')
+            // ),
+            // new ListTile(
+            //   leading:Icon(Icons.feedback),
+            //   title:Text('feedback')
+            // )
           ]
         )
       )
