@@ -124,40 +124,89 @@
 
 //----------------------
 //横向滚动
+// import 'package:flutter/material.dart';
+
+// void main () => runApp(MyApp());
+
+// class MyApp extends StatelessWidget{
+//   @override
+//   Widget build(BuildContext context){
+//     return MaterialApp(
+//       title:'text flutter',
+//       home:Scaffold(
+//         body:Center( //结构 body居中
+//           child:Container(//盒子容器
+//             height:200.0,//容器高度
+//             child:ListView(//列表组件
+//               scrollDirection:Axis.horizontal,//列表组件横向
+//               children: <Widget>[//组件中的单个元素
+//                   //图片列表
+//                   Container(//容器 宽180的色块
+//                     width:180.0,
+//                     color:Colors.lightBlue
+//                   ),
+//                   Container(
+//                     width:180.0,
+//                     color:Colors.orange
+//                   ),
+//                   Container(
+//                     width:180.0,
+//                     color:Colors.redAccent
+//                   )
+//               ],
+//             )
+//           )
+//         )
+//       )
+//     );
+//   }
+// }
+
+//-------------------------------------
 import 'package:flutter/material.dart';
 
-void main () => runApp(MyApp());
+void main ()=> runApp(MyApp());
 
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      title:'text flutter',
+      title:'列表写成一个组件',
       home:Scaffold(
-        body:Center( //结构 body居中
-          child:Container(//盒子容器
-            height:200.0,//容器高度
-            child:ListView(//列表组件
-              scrollDirection:Axis.horizontal,//列表组件横向
-              children: <Widget>[//组件中的单个元素
-                  //图片列表
-                  Container(//容器 宽180的色块
-                    width:180.0,
-                    color:Colors.lightBlue
-                  ),
-                  Container(
-                    width:180.0,
-                    color:Colors.orange
-                  ),
-                  Container(
-                    width:180.0,
-                    color:Colors.redAccent
-                  )
-              ],
-            )
+        body:Center(
+          child:Container(
+            height:200.0,
+            child:MyList()//使用列表组件 flutter所有皆组件
           )
         )
       )
     );
   }
 }
+
+
+//列表写成一个组件
+class MyList extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return ListView(
+      scrollDirection: Axis.horizontal,
+      children: <Widget>[
+        Container(
+          width:180.0,
+          color:Colors.lightBlue,
+        ),Container(
+          width:180.0,
+          color:Colors.amber
+        ),Container(
+          width:180.0,
+          color:Colors.deepOrange
+        ),Container(
+          width:180.0,
+          color:Colors.deepPurpleAccent
+        )
+      ],
+    );
+  }
+}
+
