@@ -163,20 +163,67 @@
 // }
 
 //-------------------------------------
+// import 'package:flutter/material.dart';
+
+// void main ()=> runApp(MyApp());
+
+// class MyApp extends StatelessWidget{
+//   @override
+//   Widget build(BuildContext context){
+//     return MaterialApp(
+//       title:'列表写成一个组件',
+//       home:Scaffold(
+//         body:Center(
+//           child:Container(
+//             height:200.0,
+//             child:MyList()//使用列表组件 flutter所有皆组件
+//           )
+//         )
+//       )
+//     );
+//   }
+// }
+
+
+// //列表写成一个组件
+// class MyList extends StatelessWidget{
+//   @override
+//   Widget build(BuildContext context){
+//     return ListView(
+//       scrollDirection: Axis.horizontal,
+//       children: <Widget>[
+//         Container(
+//           width:180.0,
+//           color:Colors.lightBlue,
+//         ),Container(
+//           width:180.0,
+//           color:Colors.amber
+//         ),Container(
+//           width:180.0,
+//           color:Colors.deepOrange
+//         ),Container(
+//           width:180.0,
+//           color:Colors.deepPurpleAccent
+//         )
+//       ],
+//     );
+//   }
+// }
+
 import 'package:flutter/material.dart';
 
-void main ()=> runApp(MyApp());
+void main () => runApp(MyApp());
 
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      title:'列表写成一个组件',
+      title:'apppppppppppp',
       home:Scaffold(
         body:Center(
           child:Container(
-            height:200.0,
-            child:MyList()//使用列表组件 flutter所有皆组件
+            height:350.0,
+            child:MyList()
           )
         )
       )
@@ -184,29 +231,27 @@ class MyApp extends StatelessWidget{
   }
 }
 
-
-//列表写成一个组件
 class MyList extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    return ListView(
-      scrollDirection: Axis.horizontal,
+    return ListView( //返回ListView
+      scrollDirection:Axis.horizontal, //横向
       children: <Widget>[
         Container(
-          width:180.0,
-          color:Colors.lightBlue,
-        ),Container(
-          width:180.0,
-          color:Colors.amber
-        ),Container(
-          width:180.0,
-          color:Colors.deepOrange
-        ),Container(
-          width:180.0,
-          color:Colors.deepPurpleAccent
+          width: 120.0,
+          color: Colors.black26,
+        ),
+        Container(
+          width: 150.0,
+          color: Colors.lightBlueAccent,
+        ),
+        Container(
+          width: 170.0,
+          color: Colors.orange,
         )
       ],
     );
   }
 }
+
 
