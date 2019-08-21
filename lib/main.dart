@@ -210,20 +210,64 @@
 //   }
 // }
 
+// import 'package:flutter/material.dart';
+
+// void main () => runApp(MyApp());
+
+// class MyApp extends StatelessWidget{
+//   @override
+//   Widget build(BuildContext context){
+//     return MaterialApp(
+//       title:'apppppppppppp',
+//       home:Scaffold(
+//         body:Center(
+//           child:Container(
+//             height:350.0,
+//             child:MyList()
+//           )
+//         )
+//       )
+//     );
+//   }
+// }
+
+// class MyList extends StatelessWidget{
+//   @override
+//   Widget build(BuildContext context){
+//     return ListView( //返回ListView
+//       scrollDirection:Axis.horizontal, //横向
+//       children: <Widget>[
+//         Container(
+//           width: 120.0,
+//           color: Colors.black26,
+//         ),
+//         Container(
+//           width: 150.0,
+//           color: Colors.lightBlueAccent,
+//         ),
+//         Container(
+//           width: 170.0,
+//           color: Colors.orange,
+//         )
+//       ],
+//     );
+//   }
+// }
+
 import 'package:flutter/material.dart';
 
-void main () => runApp(MyApp());
+void main ()=> runApp(MyApp());
 
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      title:'apppppppppppp',
+      title:'qweqwewrrttt',
       home:Scaffold(
-        body:Center(
-          child:Container(
-            height:350.0,
-            child:MyList()
+        body:Center(//主体
+          child:Container(//容器
+            height: 550.0,//容器高度
+            child:MyList()//组件
           )
         )
       )
@@ -234,24 +278,22 @@ class MyApp extends StatelessWidget{
 class MyList extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    return ListView( //返回ListView
-      scrollDirection:Axis.horizontal, //横向
+    return ListView(
+      scrollDirection: Axis.horizontal,
       children: <Widget>[
         Container(
-          width: 120.0,
-          color: Colors.black26,
+          width:120.0,
+          color: Colors.orangeAccent,
+        ),
+        Container(
+          width: 160.0,
+          color: Colors.blueGrey,
         ),
         Container(
           width: 150.0,
-          color: Colors.lightBlueAccent,
-        ),
-        Container(
-          width: 170.0,
           color: Colors.orange,
         )
       ],
     );
   }
 }
-
-
